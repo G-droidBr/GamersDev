@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Switch , Route} from "react-router-dom"
+import Home from './pages/home';
+import creators from './pages/creators';
+import site from './pages/site';
+import random from './pages/random';
+import edit from './pages/edit';
+import Navbar from './componets/navbar/Navbar';
+import SideBar from './componets/side-bar/SideBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+  
+      <Navbar/>
+      <div style = {{display: "flex"}}>
+      <SideBar />
+
+      <Switch>
+
+      <Route exact path = "/home" component = {Home}/>
+      <Route path = "/creators" component = {creators}/>
+      <Route path = "/site" component = {site}/>
+      <Route path = "/random" component = {random}/>
+      <Route path = "/edit" component = {edit}/>
+      
+     </Switch>
+
+      </div>
+      
     </div>
   );
 }
