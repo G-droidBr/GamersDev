@@ -4,19 +4,16 @@ import axios from 'axios'
 import Cards from './Cards'
 
 const Div = styled.div`
-    /* position: absolute;
-    height: 100%;
-    width: calc(100% - 78px);
-    left: 78px;
-    transition: all 0.5s ease; */
-    display: flex;
-   
-    margin-left:270px;
-    background-color: ;
-    width: 100vw;
 
-  
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+   justify-content: space-around;
+    height: 100vh; 
+    width: 95vw;
+    background-color:  rgb(9, 9, 9);
     
+  
 `
 
 
@@ -46,9 +43,10 @@ class Home extends Component {
         return (
 
             <Div>
+                
                 {console.log(this.state.library)}
                 {this.state.library.map(games => {
-                  return <Cards name={games.name} background = {games.background_image}/>
+                  return <Cards name={games.name} background = {games.background_image} datas = {games.released}/>
                 })}
 
             </Div>

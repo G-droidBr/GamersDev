@@ -1,120 +1,113 @@
 import React, { Component } from 'react'
 import "./side.css"
+import { Link } from 'react-router-dom';
 
-import {GiConsoleController} from "react-icons/gi"
+import { GiConsoleController } from "react-icons/gi"
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsGrid3X3Gap } from "react-icons/bs"
-import {FaUserAstronaut} from 'react-icons/fa';
-import {GiTrophy} from "react-icons/gi";
+import { FaUserAstronaut } from 'react-icons/fa';
+import { GiTrophy } from "react-icons/gi";
+import { FcReadingEbook } from "react-icons/fc"
 
 
 class SideBar extends Component {
 
-    state = {
 
-        sideBar: false
 
-    }
 
-    button = () => {
-
-        this.setState({
-            sideBar: !this.state.sideBar
-        })
-
-    }
 
 
     render() {
         return (
-            <body>
-                <div className={`sidebar ${this.state.sideBar ? "active" : ""} `}>
+            <div className="body">
+                <div className={`sidebar ${this.props.isOpen ? "active" : ""} `}>
                     <div className="logo-content">
                         <div className="logo">
                             <FaUserAstronaut className="oculos" />
                             <div className="logo-name"> GamersDev  </div>
                         </div>
-                        <AiOutlineMenu onClick={this.button} id="btn" />
+                        <AiOutlineMenu onClick={this.props.toggleSideBar} id="btn" />
                     </div>
                     <ul className={`nav-list`}>
 
+
                         <li>
-                            <a href="#">
-                                <i className = "control"> <GiConsoleController /> </i>
+                            <Link to="/">
+                                <i className="control"> <GiConsoleController /> </i>
                                 <span className="links-name"> AllGames</span>
-                            </a>
+                            </Link>
                             <span className="tooltip"> Games</span>
                         </li>
 
                         <li>
-                            <a href="#">
-                                <i className = "trophy"> <GiTrophy /> </i>
+                            <Link to="/">
+                                <i className="trophy"> <GiTrophy /> </i>
                                 <span className="links-name"> BestGame</span>
-                            </a>
+                            </Link>
                             <span className="tooltip"> BestGame</span>
                         </li>
 
                         <li>
-                            <a href="#">
+                            <Link to="/">
                                 <i > <BsGrid3X3Gap /> </i>
                                 <span className="links-name"> DashBoard</span>
-                            </a>
+                            </Link>
                             <span className="tooltip"> DashBoard</span>
                         </li>
 
                         <li>
-                            <a href="#">
+                            <Link to="/">
                                 <i> <BsGrid3X3Gap /> </i>
                                 <span className="links-name"> DashBoard</span>
-                            </a>
+                            </Link>
                             <span className="tooltip"> DashBoard</span>
                         </li>
 
                         <li>
-                            <a href="#">
+                            <Link to="/">
                                 <i> <BsGrid3X3Gap /> </i>
                                 <span className="links-name"> DashBoard</span>
-                            </a>
+                            </Link>
                             <span className="tooltip"> DashBoard</span>
                         </li>
 
                         <li>
-                            <a href="#">
+                            <Link to="/">
                                 <i> <BsGrid3X3Gap /> </i>
                                 <span className="links-name"> DashBoard</span>
-                            </a>
+                            </Link>
                             <span className="tooltip"> DashBoard</span>
                         </li>
 
                         <li>
-                            <a href="#">
+                            <Link to="/">
                                 <i> <BsGrid3X3Gap /> </i>
                                 <span className="links-name"> DashBoard</span>
-                            </a>
+                            </Link>
                             <span className="tooltip"> DashBoard</span>
                         </li>
 
                         <li>
-                            <a href="#">
+                            <Link to="/">
                                 <i> <BsGrid3X3Gap /> </i>
                                 <span className="links-name"> DashBoard</span>
-                            </a>
+                            </Link>
+
                             <span className="tooltip"> DashBoard</span>
                         </li>
 
                         <li>
-                            <a href="#">
-                                <i> <BsGrid3X3Gap /> </i>
-                                <span className="links-name"> DashBoard</span>
-                            </a>
-                            <span className="tooltip"> DashBoard</span>
+                            <Link to="/creators">
+                                <i className="creators">  <FcReadingEbook /> </i>
+                                <span className="links-name">Creators</span>
+                                <span className="tooltip">Creators</span>
+                            </Link>
                         </li>
-
                     </ul>
 
                 </div>
 
-            </body>
+            </div>
         )
     }
 }

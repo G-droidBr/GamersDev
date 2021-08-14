@@ -1,7 +1,7 @@
 body{
     position: relative;
     min-height: 100vh;
-    background-color: rgb(31, 27, 27);
+    background-color: rgb(28, 27, 27);
     overflow: hidden;
     width: 240px;
   
@@ -159,5 +159,8 @@ body{
 .active .links-name{
     opacity: 1;
     pointer-events: auto;
+}
+.creators{
+    font-size: 2.5rem;
 }
 
