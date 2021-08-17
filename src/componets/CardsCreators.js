@@ -42,14 +42,14 @@ class CardsCreators extends Component {
             <CardFlex>
                 <CardContent>
 
-                    <img src="https://p2.trrsf.com/image/fget/cf/1200/1200/filters:quality(85)/images.terra.com/2021/03/05/1200px-patrickstar.jpg" />
+                    <img alt = "img-creator"src="https://p2.trrsf.com/image/fget/cf/1200/1200/filters:quality(85)/images.terra.com/2021/03/05/1200px-patrickstar.jpg" />
                     <h2>Gustavo Barbosa</h2>
                     <InstaLogo> <AiOutlineInstagram/> </InstaLogo> 
 
                 </CardContent>
                 <CardContent>
 
-                    <img src="https://imgsapp2.correiobraziliense.com.br/app/noticia_127983242361/2020/06/14/863689/20200614172344185476a.jpg" />
+                    <img  alt = "img-creator" src="https://imgsapp2.correiobraziliense.com.br/app/noticia_127983242361/2020/06/14/863689/20200614172344185476a.jpg" />
                     <h2> Patricia </h2>
                     <InstaLogo> <AiOutlineInstagram/> </InstaLogo>
                    

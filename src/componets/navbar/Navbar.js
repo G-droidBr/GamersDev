@@ -19,7 +19,7 @@ input{
     border-radius: 2rem;
     background-color: rgb(9, 9, 9);
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -32,13 +32,31 @@ color: white;
 
 
 class Navbar extends Component {
+
+    state = {
+        value: ""
+    }
+
+    handleInput = (ev) => {
+        
+        this.setState({
+            value: ev.target.value
+        },() => this.props.handleFilterGames(this.state.value))
+    }
+    
+    
     render() {
         return (
             <Navbarr>
-    
+              
+
                 <Title>GamersDev</Title>
-                <input/>
-               
+
+                <input
+                    value={this.state.value}
+                    onChange={this.handleInput}
+                />
+
             </Navbarr>
         )
     }
