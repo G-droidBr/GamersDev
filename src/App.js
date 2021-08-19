@@ -10,7 +10,7 @@ import Navbar from './componets/navbar/Navbar';
 import SideBar from './componets/side-bar/SideBar';
 import { Component } from 'react';
 import axios from 'axios'
-import pcgames from './pages/pcgames';
+import Pcgames from './pages/Pcgames';
 import bestGames from './pages/bestGames';
 
 
@@ -75,12 +75,12 @@ class App extends Component {
 
 
   render() {
-   
+
     return (
       <div>
 
-        <Navbar handleFilterGames ={this.handleFilterGames} />
-        
+        <Navbar handleFilterGames={this.handleFilterGames} />
+
 
         <div style={{ display: "flex" }}>
           <SideBar isOpen={this.state.sideBar} toggleSideBar={this.toggleSideBar} />
@@ -88,13 +88,14 @@ class App extends Component {
 
             <Switch>
 
-              <Route exact path="/" render={(props) => <Home {...props} filter={this.state.filterGames}  />} />
-
+              <Route exact path="/" render={(props) => <Home {...props} filter={this.state.filterGames} />} />
+      
 
 
               <Route path="/creators" component={creators} navbar={this.handleNavbar} />
-              <Route path = "/bestgames" render={(props) => <bestGames {...props} library={this.state.library} />} />
-              <Route path = "/pcgames" component = {pcgames}/>
+              <Route path="/bestgames" render={(props) => <bestGames {...props} library={this.state.library} />} />
+              <Route path="/pcgames" render={(props) => <Pcgames {...props} filter={this.state.filterGames} />} />
+              
               <Route path="/site" component={site} />
               <Route path="/random" component={random} />
               <Route path="/edit" component={edit} />

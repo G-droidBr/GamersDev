@@ -38,18 +38,16 @@ class Navbar extends Component {
     }
 
     handleInput = (ev) => {
-        
+
         this.setState({
             value: ev.target.value
-        },() => this.props.handleFilterGames(this.state.value))
+        }, () => this.props.handleFilterGames(this.state.value))
     }
-    
-    
+
+
     render() {
         return (
             <Navbarr>
-              
-
                 <Title>GamersDev</Title>
 
                 <input

@@ -2,14 +2,13 @@ import React, { Component } from 'react'
 import "./side.css"
 import { Link } from 'react-router-dom';
 
-import { GiConsoleController } from "react-icons/gi"
-import { AiOutlineMenu } from "react-icons/ai";
+import { GiConsoleController , GiTrophy, GiPerspectiveDiceSixFacesRandom } from "react-icons/gi"
+import { AiOutlineMenu,AiFillWindows } from "react-icons/ai";
 import { BsGrid3X3Gap } from "react-icons/bs"
-import { FaUserAstronaut , FaGamepad } from 'react-icons/fa';
-import { GiTrophy } from "react-icons/gi";
+import { FaUserAstronaut , FaPlaystation} from 'react-icons/fa';
 import { FcReadingEbook } from "react-icons/fc"
-import {HiDesktopComputer} from "react-icons/hi"
-
+import { SiNintendoswitch } from "react-icons/si"
+import {BiGame} from "react-icons/bi"
 
 class SideBar extends Component {
 
@@ -45,7 +44,7 @@ class SideBar extends Component {
 
                         <li>
                             <Link to="/pcgames">
-                                <i className="trophy" > <HiDesktopComputer /> </i>
+                                <i className="trophy" > <AiFillWindows /> </i>
                                 <span className="links-name"> Pc Games</span>
                             </Link>
                             <span className="tooltip"> Pc Games</span>
@@ -53,7 +52,7 @@ class SideBar extends Component {
 
                         <li>
                             <Link to="/">
-                                <i className="trophy"> <FaGamepad/> </i>
+                                <i className="trophy"> <FaPlaystation/> </i>
                                 <span className="links-name"> PlayStation </span>
                             </Link>
                             <span className="tooltip"> PlayStation </span>
@@ -61,26 +60,26 @@ class SideBar extends Component {
 
                         <li>
                             <Link to="/">
-                                <i> <BsGrid3X3Gap /> </i>
-                                <span className="links-name"> DashBoard</span>
+                                <i> <SiNintendoswitch/> </i>
+                                <span className="links-name"> Nintendo </span>
                             </Link>
-                            <span className="tooltip"> DashBoard</span>
+                            <span className="tooltip"> Nintendo</span>
                         </li>
 
                         <li>
                             <Link to="/">
-                                <i> <BsGrid3X3Gap /> </i>
-                                <span className="links-name"> DashBoard</span>
+                                <i className = "random"> <GiPerspectiveDiceSixFacesRandom /> </i>
+                                <span className="links-name"> Random Game</span>
                             </Link>
-                            <span className="tooltip"> DashBoard</span>
+                            <span className="tooltip"> Random </span>
                         </li>
 
                         <li>
                             <Link to="/">
-                                <i> <BsGrid3X3Gap /> </i>
-                                <span className="links-name"> DashBoard</span>
+                                <i className = "trophy"> <BiGame /> </i>
+                                <span className="links-name"> GamesDev</span>
                             </Link>
-                            <span className="tooltip"> DashBoard</span>
+                            <span className="tooltip"> GamesDev</span>
                         </li>
 
                         <li>

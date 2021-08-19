@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Cards from '../componets/Cards'
+// import Cards from '../componets/Cards'
 
 class bestGames extends Component {
 

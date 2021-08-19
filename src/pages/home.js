@@ -31,9 +31,9 @@ class Home extends Component {
             <Div>
              
                 {this.props.filter.map(games => {
-                return <Cards name={games.name} background = {games.background_image} datas = {games.released} platforms = {games.platforms} />
+                return <Cards name={games.name} background = {games.background_image} datas = {games.released} platforms = {games.platforms} metacritic = {games.metacritic} />
                 })}
-
+               
             </Div>
 
 
