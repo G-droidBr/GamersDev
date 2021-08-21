@@ -42,16 +42,9 @@ class SideBar extends Component {
                             <span className="tooltip"> BestGame</span>
                         </li>
 
-                        <li>
-                            <Link to="/pcgames">
-                                <i className="trophy" > <AiFillWindows /> </i>
-                                <span className="links-name"> Pc Games</span>
-                            </Link>
-                            <span className="tooltip"> Pc Games</span>
-                        </li>
 
                         <li>
-                            <Link to="/">
+                            <Link to="/playstation">
                                 <i className="trophy"> <FaPlaystation/> </i>
                                 <span className="links-name"> PlayStation </span>
                             </Link>
@@ -59,13 +52,21 @@ class SideBar extends Component {
                         </li>
 
                         <li>
-                            <Link to="/">
+                            <Link to="/nintendo">
                                 <i> <SiNintendoswitch/> </i>
                                 <span className="links-name"> Nintendo </span>
                             </Link>
                             <span className="tooltip"> Nintendo</span>
                         </li>
 
+                        <li>
+                            <Link to="/pcgames">
+                                <i className="trophy" > <AiFillWindows /> </i>
+                                <span className="links-name"> Pc Games</span>
+                            </Link>
+                            <span className="tooltip"> Pc Games</span>
+                        </li>
+                        
                         <li>
                             <Link to="/">
                                 <i className = "random"> <GiPerspectiveDiceSixFacesRandom /> </i>

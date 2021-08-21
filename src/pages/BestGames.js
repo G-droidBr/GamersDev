@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import Cards from '../componets/Cards'
 
-class bestGames extends Component {
+class BestGames extends Component {
 
 
 
@@ -19,4 +19,4 @@ class bestGames extends Component {
     }
 }
 
-export default bestGames
+export default BestGames

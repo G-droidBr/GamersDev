@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-
-import Cards from '../componets/Cards'
 import styled from 'styled-components'
-
+import Cards from '../componets/Cards'
 
 const Div = styled.div`
 
@@ -16,48 +14,37 @@ const Div = styled.div`
     
   
 `
-
-class Pcgames extends Component {
+ class PlayStation extends Component {
 
     state = {
-        pcGames: []
+        psn : []
     }
-
-
 
     componentDidMount = () => {
        
         let games = this.props.filter.filter((element) => {
 
-            return element.platforms.some(platform => platform.platform.name === "PC")
+            return element.platforms.some(platform => platform.platform.name === "PlayStation 4")
 
         })
 
         this.setState({
-            pcGames: games,
+            psn : games,
         })
 
     }
-    
-  
 
     render() {
-
-        console.log(this.props.filter)
-        
         return (
-
             <Div>
-
-                {this.state.pcGames.map((games, i) => {
+               
+                {this.state.psn.map((games) => {
                     return <Cards  name={games.name} background={games.background_image} datas={games.released} platforms={games.platforms} metacritic={games.metacritic}  />
                 })}
-
-            
 
             </Div>
         )
     }
 }
 
-export default Pcgames
+export default PlayStation

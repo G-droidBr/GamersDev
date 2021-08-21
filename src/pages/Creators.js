@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CardsCreators from "../componets/CardsCreators"
 
- class creators extends Component {
+ class Creators extends Component {
   
 
     render() {
@@ -13,4 +13,4 @@ import CardsCreators from "../componets/CardsCreators"
     }
 }
 
-export default creators
+export default Creators

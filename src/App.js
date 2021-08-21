@@ -1,17 +1,25 @@
 import styled from 'styled-components'
 import './App.css';
 import { Switch, Route } from "react-router-dom"
-import Home from './pages/home';
-import creators from './pages/creators';
-import site from './pages/site';
-import random from './pages/random';
+
+
+
+
 import edit from './pages/edit';
 import Navbar from './componets/navbar/Navbar';
-import SideBar from './componets/side-bar/SideBar';
+
 import { Component } from 'react';
 import axios from 'axios'
+
+import Home from './pages/Home';
+import Creators from './pages/Creators';
+import Random from './pages/Random';
+import SideBar from './componets/side-bar/SideBar';
 import Pcgames from './pages/Pcgames';
-import bestGames from './pages/bestGames';
+import BestGames from './pages/BestGames';
+import PlayStation from './pages/PlayStation';
+import Nintendo from './pages/Nintendo';
+
 
 
 const Content = styled.div`
@@ -31,7 +39,8 @@ class App extends Component {
     navbar: true,
     library: [],
     sideBar: false,
-    filterGames: []
+    filterGames: [],
+    pcGames: []
 
   }
 
@@ -46,6 +55,7 @@ class App extends Component {
     })
 
   }
+  
 
 
   toggleSideBar = () => {
@@ -88,16 +98,23 @@ class App extends Component {
 
             <Switch>
 
-              <Route exact path="/" render={(props) => <Home {...props} filter={this.state.filterGames} />} />
+              <Route exact path="/" render={(props) => <Home {...props} filter={this.state.filterGames} library = {this.state.library} />} />
       
 
 
-              <Route path="/creators" component={creators} navbar={this.handleNavbar} />
-              <Route path="/bestgames" render={(props) => <bestGames {...props} library={this.state.library} />} />
+              <Route path="/creators" component={Creators} navbar={this.handleNavbar} />
+
+              <Route path="/bestgames" render={(props) => <BestGames {...props} library={this.state.library} />} />
+
               <Route path="/pcgames" render={(props) => <Pcgames {...props} filter={this.state.filterGames} />} />
-              
-              <Route path="/site" component={site} />
-              <Route path="/random" component={random} />
+
+              <Route path="/playstation" render={(props) => <PlayStation {...props} filter={this.state.filterGames} />} />
+
+              <Route path="/nintendo" render={(props) => <Nintendo {...props} filter={this.state.filterGames} />} />
+
+
+             
+              <Route path="/random" component={Random} />
               <Route path="/edit" component={edit} />
 
             </Switch>
