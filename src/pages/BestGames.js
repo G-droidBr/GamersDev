@@ -1,20 +1,34 @@
 import React, { Component } from 'react'
-// import Cards from '../componets/Cards'
+import Cards from '../componets/Cards'
+import styled from 'styled-components'
 
-class BestGames extends Component {
+const Div = styled.div`
 
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+   justify-content: space-around;
+    height: 100vh; 
+    width: 96vw;
+    background-color:  rgb(9, 9, 9);
+    
+`  
 
+ class BestGames extends Component {
 
+    
+   
 
     render() {
-        return (<>
-        melhores jogos
-        </>
-            // <div>
-            //     {this.props.libary.map(games => {
-            //         return <Cards name={games.name} background = {games.background_image} datas = {games.released}/>
-            //     })}
-            // </div>
+        return (
+            <Div>
+
+                {this.state.bestGames.map((games, i) => {
+                    return <Cards  name={games.name} background={games.background_image} datas={games.released} platforms={games.platforms} metacritic={games.metacritic}  />
+                })}
+
+
+            </Div>
         )
     }
 }

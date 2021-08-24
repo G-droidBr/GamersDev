@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import './App.css';
-import { Switch, Route } from "react-router-dom"
+import { Switch, Route } from 'react-router-dom'
 
-
+import { motion } from 'framer-motion';
 
 
 import edit from './pages/edit';
@@ -96,7 +96,9 @@ class App extends Component {
           <SideBar isOpen={this.state.sideBar} toggleSideBar={this.toggleSideBar} />
           <Content isOpen={this.state.sideBar}>
 
-            <Switch>
+            
+
+              <Switch>
 
               <Route exact path="/" render={(props) => <Home {...props} filter={this.state.filterGames} library = {this.state.library} />} />
       
@@ -112,12 +114,11 @@ class App extends Component {
 
               <Route path="/nintendo" render={(props) => <Nintendo {...props} filter={this.state.filterGames} />} />
 
+             <Route path="/random" render={(props) => <Random {...props} filter={this.state.filterGames} />} />
 
-             
-              <Route path="/random" component={Random} />
               <Route path="/edit" component={edit} />
 
-            </Switch>
+              </Switch>
           </Content>
         </div>
 
