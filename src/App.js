@@ -7,6 +7,7 @@ import { Switch, Route } from "react-router-dom"
 
 import edit from './pages/edit';
 import Navbar from './componets/navbar/Navbar';
+import NavbarFalse from './componets/navbar/NavbarFalse';
 
 import { Component } from 'react';
 import axios from 'axios'
@@ -55,7 +56,7 @@ class App extends Component {
     })
 
   }
-  
+
 
 
   toggleSideBar = () => {
@@ -77,19 +78,29 @@ class App extends Component {
 
   }
 
-  handleNavbar = () => {
+  handleNavbarFalse = () => {
     this.setState({
       navbar: false
     })
   }
+  handleNavbar = () => {
 
+  this.setState({
+    navbar : true
+  })
+
+  }
+
+
+  
 
   render() {
 
     return (
       <div>
 
-        <Navbar handleFilterGames={this.handleFilterGames} />
+  {this.state.navbar ? <Navbar handleFilterGames={this.handleFilterGames} /> :  <NavbarFalse/>}
+        
 
 
         <div style={{ display: "flex" }}>
@@ -97,25 +108,24 @@ class App extends Component {
           <Content isOpen={this.state.sideBar}>
 
             <Switch>
-
-              <Route exact path="/" render={(props) => <Home {...props} filter={this.state.filterGames} library = {this.state.library} />} />
       
+              <Route exact path="/" render={(props) => <Home {...props} filter={this.state.filterGames} library={this.state.library} navbar = {this.handleNavbar} />} />
 
 
-              <Route path="/creators" component={Creators} navbar={this.handleNavbar} />
 
-              <Route path="/bestgames" render={(props) => <BestGames {...props} library={this.state.library} />} />
+              <Route path="/creators" render={(props) => <Creators {...props}  navbar = {this.handleNavbarFalse} />} />
 
-              <Route path="/pcgames" render={(props) => <Pcgames {...props} filter={this.state.filterGames} />} />
+              <Route path="/bestgames" render={(props) => <BestGames {...props} library={this.state.library} navbar = {this.handleNavbarFalse} />} />
 
-              <Route path="/playstation" render={(props) => <PlayStation {...props} filter={this.state.filterGames} />} />
+              <Route path="/pcgames" render={(props) => <Pcgames {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse} />} />
 
-              <Route path="/nintendo" render={(props) => <Nintendo {...props} filter={this.state.filterGames} />} />
+              <Route path="/playstation" render={(props) => <PlayStation {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse} />} />
 
+              <Route path="/nintendo" render={(props) => <Nintendo {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse} />} />
 
-             
-              <Route path="/random" component={Random} />
-              <Route path="/edit" component={edit} />
+              <Route path="/:id" render = {(props) => <Random {...props} />}  />
+              
+              <Route path="/edit" component={edit}  />
 
             </Switch>
           </Content>

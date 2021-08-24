@@ -22,14 +22,18 @@ const Div = styled.div`
 
 class Home extends Component {
 
-    
+    componentDidMount = () => {
+
+        this.props.navbar()
+        
+    }
   
     
     render() {
         return (
             
             <Div>
-             
+             {console.log(this.props.filter)}
                 {this.props.filter.map(games => {
                 return <Cards name={games.name} background = {games.background_image} datas = {games.released} platforms = {games.platforms} metacritic = {games.metacritic} />
                 })}

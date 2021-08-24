@@ -4,9 +4,11 @@ body{
     background-color: rgb(28, 27, 27);
     overflow: hidden;
     width: 240px;
+    
   
 }
 .sidebar{
+
     position: fixed;
     top: 10vh;
     left: 0;

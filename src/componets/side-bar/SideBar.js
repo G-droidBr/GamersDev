@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 import { GiConsoleController , GiTrophy, GiPerspectiveDiceSixFacesRandom } from "react-icons/gi"
 import { AiOutlineMenu,AiFillWindows } from "react-icons/ai";
-import { BsGrid3X3Gap } from "react-icons/bs"
 import { FaUserAstronaut , FaPlaystation} from 'react-icons/fa';
 import { FcReadingEbook } from "react-icons/fc"
 import { SiNintendoswitch } from "react-icons/si"
@@ -68,7 +67,7 @@ class SideBar extends Component {
                         </li>
                         
                         <li>
-                            <Link to="/">
+                            <Link to="/random">
                                 <i className = "random"> <GiPerspectiveDiceSixFacesRandom /> </i>
                                 <span className="links-name"> Random Game</span>
                             </Link>
@@ -83,14 +82,7 @@ class SideBar extends Component {
                             <span className="tooltip"> GamesDev</span>
                         </li>
 
-                        <li>
-                            <Link to="/">
-                                <i> <BsGrid3X3Gap /> </i>
-                                <span className="links-name"> DashBoard</span>
-                            </Link>
-
-                            <span className="tooltip"> DashBoard</span>
-                        </li>
+                       
 
                         <li>
                             <Link to="/creators">

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import {AiOutlineInstagram} from 'react-icons/ai'
 
+
 const CardFlex = styled.div`
 
 display: flex;
@@ -44,6 +45,8 @@ class CardsCreators extends Component {
 
                     <img alt = "img-creator"src="https://p2.trrsf.com/image/fget/cf/1200/1200/filters:quality(85)/images.terra.com/2021/03/05/1200px-patrickstar.jpg" />
                     <h2>Gustavo Barbosa</h2>
+                    <h4>Years : 18</h4>
+               
                     <InstaLogo> <AiOutlineInstagram/> </InstaLogo> 
 
                 </CardContent>
@@ -51,6 +54,8 @@ class CardsCreators extends Component {
 
                     <img  alt = "img-creator" src="https://imgsapp2.correiobraziliense.com.br/app/noticia_127983242361/2020/06/14/863689/20200614172344185476a.jpg" />
                     <h2> Patricia </h2>
+                    <h4>Years : 18</h4>
+                   
                     <InstaLogo> <AiOutlineInstagram/> </InstaLogo>
                    
 

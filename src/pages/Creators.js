@@ -3,6 +3,11 @@ import CardsCreators from "../componets/CardsCreators"
 
  class Creators extends Component {
   
+    componentDidMount = () => {
+       
+        this.props.navbar()
+
+    }
 
     render() {
         return (

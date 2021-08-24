@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { FaUserAstronaut } from 'react-icons/fa';
 
 const Navbarr = styled.nav`
 
 display: flex;
-justify-content: flex-start;
+justify-content: space-around;
 align-items: center;
 height: 10vh;
 background-color: black;
@@ -13,7 +14,7 @@ width: 100vw;
 
 input{
     
-    margin-left: 17vw;
+    
     width: 50vw;
     height: 4vh;
     border-radius: 2rem;
@@ -22,10 +23,14 @@ input{
     font-size: 1rem;
     text-align: center;
 }
+i {
+    color: white;
+    font-size: 2rem;
+}
 
 `
 const Title = styled.h1`
-margin-left: 5vh;
+
 color: white;
 
 `
@@ -55,6 +60,8 @@ class Navbar extends Component {
                     onChange={this.handleInput}
                 />
 
+
+                <i><FaUserAstronaut /></i>
             </Navbarr>
         )
     }

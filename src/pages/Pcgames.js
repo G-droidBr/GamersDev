@@ -26,7 +26,10 @@ class Pcgames extends Component {
 
 
     componentDidMount = () => {
-       
+        
+        
+        this.props.navbar()
+        
         let games = this.props.filter.filter((element) => {
 
             return element.platforms.some(platform => platform.platform.name === "PC")
