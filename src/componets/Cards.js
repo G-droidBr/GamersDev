@@ -33,6 +33,8 @@ const Card = styled.div`
         font-size: 1rem;
         margin-top: 2vh;
     }
+
+    
     
     
 `
@@ -85,6 +87,10 @@ let platformsIcons = {
 
 }
 
+function handleMouseEnter(params){
+    
+}
+
 
 class Cards extends Component {
 
@@ -105,7 +111,7 @@ class Cards extends Component {
         return (
             <Card>
 
-                <img src={this.props.background} alt="logo" />
+                <img src={this.props.background} alt="logo" onMouseEnter={handleMouseEnter}/>
                 <Game>
                     <InfoGames>
                         <div>

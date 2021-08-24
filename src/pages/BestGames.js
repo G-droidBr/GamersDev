@@ -16,7 +16,11 @@ const Div = styled.div`
 `
 
 
-class BestGames extends Component {
+
+
+ 
+
+ class BestGames extends Component {
 
     state = {
         bestgames: []
@@ -49,8 +53,7 @@ class BestGames extends Component {
 
 
     }
-  
-
+   
 
     render() {
         return (

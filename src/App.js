@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import './App.css';
-import { Switch, Route } from "react-router-dom"
+import { Switch, Route } from 'react-router-dom'
 
-
+import { motion } from 'framer-motion';
 
 
 import edit from './pages/edit';
@@ -126,8 +126,12 @@ class App extends Component {
               <Route path="/:id" render = {(props) => <Random {...props} />}  />
               
               <Route path="/edit" component={edit}  />
+              
+             <Route path="/random" render={(props) => <Random {...props} filter={this.state.filterGames} />} />
 
-            </Switch>
+           
+
+              </Switch>
           </Content>
         </div>
 
