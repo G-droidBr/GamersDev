@@ -5,7 +5,6 @@ import { FaUserAstronaut } from 'react-icons/fa';
 const Navbarr = styled.nav`
 
 display: flex;
-
 align-items: center;
 height: 10vh;
 background-color: black;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import Cards from '../componets/Cards'
+import Cards from '../componets/cards/Cards'
 
 const Div = styled.div`
 

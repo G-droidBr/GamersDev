@@ -22,6 +22,7 @@ const Card = styled.div`
     height: 20rem;
     width: 15rem;
     border-radius: 25px;
+   
     img{
 
         width: 100%;

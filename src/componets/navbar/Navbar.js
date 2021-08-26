@@ -20,9 +20,15 @@ input{
     border-radius: 2rem;
     background-color: rgb(9, 9, 9);
     color: white;
-    font-size: 1rem;
-    text-align: center;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    font-family: inherit;
+    :focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
 }
+}
+
 i {
     color: white;
     font-size: 2rem;

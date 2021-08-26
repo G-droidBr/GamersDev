@@ -75,7 +75,7 @@ class SideBar extends Component {
                         </li>
 
                         <li>
-                            <Link to="/">
+                            <Link to="/gamersdev">
                                 <i className = "trophy"> <BiGame /> </i>
                                 <span className="links-name"> GamesDev</span>
                             </Link>

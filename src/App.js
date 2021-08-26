@@ -2,10 +2,7 @@ import styled from 'styled-components'
 import './App.css';
 import { Switch, Route } from 'react-router-dom'
 
-import { motion } from 'framer-motion';
 
-
-import edit from './pages/edit';
 import Navbar from './componets/navbar/Navbar';
 import NavbarFalse from './componets/navbar/NavbarFalse';
 
@@ -20,6 +17,7 @@ import Pcgames from './pages/Pcgames';
 import BestGames from './pages/BestGames';
 import PlayStation from './pages/PlayStation';
 import Nintendo from './pages/Nintendo';
+import GamersDev from './pages/GamersDev';
 
 
 
@@ -119,15 +117,14 @@ class App extends Component {
 
               <Route path="/pcgames" render={(props) => <Pcgames {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse} />} />
 
-              <Route path="/playstation" render={(props) => <PlayStation {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse} />} />
+              <Route path="/playstation" render={(props) => <PlayStation {...props} filter={this.state.filterGames}  navbar = {this.handleNavbarFalse}/>} />
 
               <Route path="/nintendo" render={(props) => <Nintendo {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse} />} />
 
-              <Route path="/:id" render = {(props) => <Random {...props} />}  />
               
-              <Route path="/edit" component={edit}  />
+              <Route path="/gamersdev" render={(props) => <GamersDev {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse} />} />
               
-             <Route path="/random" render={(props) => <Random {...props} filter={this.state.filterGames} />} />
+             <Route path="/random" render={(props) => <Random {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse}/>} />
 
            
 

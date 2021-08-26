@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Cards from '../componets/Cards'
+import Cards from '../componets/cards/Cards'
 import styled from 'styled-components'
 
 const Div = styled.div`
