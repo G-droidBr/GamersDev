@@ -16,6 +16,7 @@ color: white;
 margin-left: -1rem ;
 overflow: scroll;
 @media only screen and (max-width: 800px) {  
+    width: 97vw;
     margin-left: -1rem;
     height: 98vh;
 }
@@ -25,7 +26,7 @@ const Title = styled.h1`
 font-size: 3rem;
 @media only screen and (max-width: 800px) {
    
-   width: 80vw;
+   width: 75vw;
  
 }
 `
@@ -34,7 +35,7 @@ const SubTitle = styled.h3`
 width: 30rem;
 @media only screen and (max-width: 800px) {
    
-    width: 80vw;
+    width: 75vw;
   
 }
 `

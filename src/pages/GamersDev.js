@@ -19,6 +19,7 @@ h4{
     font-size: 1.2rem;
 }
 @media only screen and (max-width: 800px) {  
+    width: 97vw;
     margin-left: -1rem;
     height: 98vh;
 
