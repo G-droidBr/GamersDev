@@ -16,7 +16,7 @@ color: white;
 margin-left: -1rem ;
 overflow: scroll;
 @media only screen and (max-width: 800px) {  
-
+    margin-left: -1rem;
     height: 98vh;
 }
 

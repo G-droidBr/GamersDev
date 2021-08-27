@@ -5,7 +5,7 @@ import CardsCreators from "../componets/creators/CardsCreators"
 const Div = styled.div`
     
     @media only screen and (max-width: 800px) {  
-
+        margin-left: -1rem;
         height: 98vh;
 }
 
