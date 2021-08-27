@@ -13,7 +13,7 @@ const Div = styled.div`
     background-color:  rgb(9, 9, 9);
     @media only screen and (max-width: 800px) {  
 
-    height: 60rem;
+        height: 98vh;
 }
   
 `

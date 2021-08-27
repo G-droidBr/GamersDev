@@ -17,7 +17,7 @@ margin-left: -1rem ;
 overflow: scroll;
 @media only screen and (max-width: 800px) {  
 
-height: 60rem;
+    height: 98vh;
 }
 
 `
