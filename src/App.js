@@ -18,6 +18,7 @@ import BestGames from './pages/BestGames';
 import PlayStation from './pages/PlayStation';
 import Nintendo from './pages/Nintendo';
 import GamersDev from './pages/GamersDev';
+import GamesDetails from './pages/GamesDetails';
 
 
 
@@ -125,6 +126,8 @@ class App extends Component {
               <Route path="/gamersdev" render={(props) => <GamersDev {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse} />} />
               
              <Route path="/random" render={(props) => <Random {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse}/>} />
+
+             <Route path = "/:id" render = {(props) => <GamesDetails {...props} library={this.state.library} /> } />
 
            
 

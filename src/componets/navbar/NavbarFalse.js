@@ -10,13 +10,16 @@ height: 10vh;
 background-color: black;
 margin-top: 0;
 width: 100vw;
+@media only screen and (max-width: 800px) {
+   width: 30rem;
+
+}
+
  i{
      color: white;
      font-size: 2rem;
      margin-left: 2rem;
  }
-
-
 
 `
 

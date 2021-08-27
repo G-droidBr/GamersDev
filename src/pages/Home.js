@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Cards from '../componets/cards/Cards'
@@ -12,7 +13,11 @@ const Div = styled.div`
     height: 100vh; 
     width: 96vw;
     background-color:  rgb(9, 9, 9);
-    
+    @media only screen and (max-width: 800px) {  
+
+   height: 60rem;
+}
+
   
 `
 
@@ -33,9 +38,9 @@ class Home extends Component {
         return (
             
             <Div>
-             {console.log(this.props.filter)}
+             
                 {this.props.filter.map(games => {
-                return <Cards name={games.name} background = {games.background_image} datas = {games.released} platforms = {games.platforms} metacritic = {games.metacritic} />
+                return <Link style = {{textDecoration : "none",color : "black"}} to = {`/${games.id}`}> <Cards name={games.name} background = {games.background_image} datas = {games.released} platforms = {games.platforms} metacritic = {games.metacritic} /> </Link>
                 })}
                
             </Div>

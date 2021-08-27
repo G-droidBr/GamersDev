@@ -15,15 +15,28 @@ margin-top: 2rem;
 color: white;
 margin-left: -1rem ;
 overflow: scroll;
+@media only screen and (max-width: 800px) {  
 
+height: 60rem;
+}
 
 `
 const Title = styled.h1`
 font-size: 3rem;
+@media only screen and (max-width: 800px) {
+   
+   width: 80vw;
+ 
+}
 `
 
 const SubTitle = styled.h3`
 width: 30rem;
+@media only screen and (max-width: 800px) {
+   
+    width: 80vw;
+  
+}
 `
 const InputDiv = styled.div`
   position: relative;
@@ -32,7 +45,6 @@ const InputDiv = styled.div`
   width: 50%;
 
 `
-
 const Input = styled.input`
 font-family: inherit;
   width: 100%;
@@ -105,11 +117,22 @@ const BtAdd = styled.button`
      
 
     }
-
+@media only screen and (max-width: 800px) {
+   
+   width: 80vw;
+   border-radius: 25px;
+ 
+}
 `
 const Buttons = styled.div`
 
 display: flex;
+@media only screen and (max-width: 800px) {
+   
+   width: 80vw;
+   
+ 
+}
 
 `
 const BtRandom = styled.button`
@@ -149,6 +172,13 @@ const BtRandom = styled.button`
         background: grey;
         transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 
+
+}
+@media only screen and (max-width: 800px) {
+   
+   width: 80vw;
+   border-radius: 25px;
+ 
 }
 `
 const Cards = styled.div`
@@ -174,17 +204,17 @@ class Random extends Component {
 
         name: "",
         fullGames: [],
-        random : [],
-        listGames : true
+        random: [],
+        listGames: true
 
 
     }
 
     componentDidMount = async () => {
-       this.props.navbar()
-        
-       let fakeApi = await axios.get("http://localhost:8000/characters").then((result) => result.data)
-        
+        this.props.navbar()
+
+        let fakeApi = await axios.get("https://ironrest.herokuapp.com/gamersdev").then((result) => result.data)
+
         this.setState({
             fullGames: fakeApi
         })
@@ -203,22 +233,20 @@ class Random extends Component {
 
     }
 
-    addGames = () => {
+    addGames = async () => {
 
+        await axios.post("https://ironrest.herokuapp.com/gamersdev", { name: this.state.name })
 
-        axios.post("http://localhost:8000/characters", { name: this.state.name })
-        
-        this.componentDidMount()
 
         this.setState({
             name: ""
-            
         })
 
+        this.handleUpdateList()
     }
 
     handleRandom = () => {
-    
+
         let totalGames = this.state.fullGames.length
 
         let a = Math.floor(Math.random() * totalGames)
@@ -226,7 +254,7 @@ class Random extends Component {
         let randomGames = this.state.fullGames[a]
 
         this.setState({
-            random : randomGames,
+            random: randomGames,
             listGames: false
         })
 
@@ -237,7 +265,7 @@ class Random extends Component {
         })
     }
     handleUpdateList = () => {
-        
+
         this.componentDidMount()
 
     }
@@ -245,28 +273,28 @@ class Random extends Component {
     render() {
         return (
             <Div>
-             
+
                 <Title> Random Game </Title>
 
                 <SubTitle> Adicione quantos jogos quiser e deixe que nós escolhemos para você!</SubTitle>
                 <InputDiv>
-                <Input
-                    onChange={(e) => this.onChange(e)}
-                    value={this.state.name}
-                    name="name"
-                />
-                <Label> Name </Label>
-                
+                    <Input
+                        onChange={(e) => this.onChange(e)}
+                        value={this.state.name}
+                        name="name"
+                    />
+                    <Label> Name </Label>
+
                 </InputDiv>
-              
+
                 <Buttons>
-                   {this.state.listGames ? <BtAdd type="submit" onClick={this.addGames} > Add Game </BtAdd> : <BtAdd type="submit" onClick={this.handleBtBack} > Back Full List </BtAdd> } 
-                    <BtRandom onClick = {this.handleRandom}>Random Game</BtRandom>
+                    {this.state.listGames ? <BtAdd type="submit" onClick={this.addGames} > Add Game </BtAdd> : <BtAdd type="submit" onClick={this.handleBtBack} > Back Full List </BtAdd>}
+                    <BtRandom onClick={this.handleRandom}>Random Game</BtRandom>
                 </Buttons>
 
-                    <Cards>
-               {this.state.listGames ?  <Card>{this.state.fullGames.map(item => <RandomCards name={item.name} id={item.id} update ={this.handleUpdateList} />)} </Card> : <Card> <RandomCards name = {this.state.random.name} id = {this.state.random.id} /> </Card>  }
-                    </Cards>
+                <Cards>
+                    {this.state.listGames ? <Card>{this.state.fullGames.map(item => <RandomCards name={item.name} id={item._id} update={this.handleUpdateList} />)} </Card> : <Card> <RandomCards name={this.state.random.name} id={this.state.random.id} /> </Card>}
+                </Cards>
 
             </Div>
 

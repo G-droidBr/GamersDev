@@ -1,14 +1,23 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 import CardsCreators from "../componets/creators/CardsCreators"
 
- class Creators extends Component {
+const Div = styled.div`
+    
+    @media only screen and (max-width: 800px) {  
+
+    height: 60rem;
+}
+
+`
+class Creators extends Component {
 
     state = {
-        creators : []
+        creators: []
     }
-  
+
     componentDidMount = () => {
-       
+
         this.props.navbar()
 
     }

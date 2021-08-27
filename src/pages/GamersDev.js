@@ -4,6 +4,7 @@ import {IoPlay} from "react-icons/io5"
 
 const Body = styled.div`
 
+
 text-align: center;
 overflow: scroll;
 height: 100vh;
@@ -17,6 +18,11 @@ h4{
     color: grey;
     font-size: 1.2rem;
 }
+@media only screen and (max-width: 800px) {  
+
+height: 60rem;
+
+}
 
 `
 
@@ -27,7 +33,7 @@ justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
 
-margin-top: 0.2rem;
+
 height: 95vh;
 width: 100vw;
 margin-left: -1rem;
@@ -230,7 +236,7 @@ class GamersDev extends Component {
                         <Card style={{ backgroundImage: `url("https://msmjamie.files.wordpress.com/2015/01/press-start-600x375.jpg")` }}>
                             <a href="https://renanoliveira20.github.io/hackJumps/" > <Play><IoPlay/></Play> </a>
                         </Card>
-                        <a href="https://renanoliveira20.github.io/hackJumps/" ><Name>HACK JUMPS</Name></a>                        
+                        <a href="https://renanoliveira20.github.io/hackJumps/" ><Name>Hack Jumps</Name></a>                        
                     </Contain>
 
                     <Contain>

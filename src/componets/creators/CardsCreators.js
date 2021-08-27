@@ -12,6 +12,10 @@ flex-wrap: wrap;
 height: 96vh;
 width: 96vw;
 overflow: scroll;
+@media only screen and (max-width: 800px) {  
+
+height: 60rem;
+}
 `
 const CardContent = styled.div`
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');

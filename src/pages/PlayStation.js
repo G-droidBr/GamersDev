@@ -11,7 +11,10 @@ const Div = styled.div`
     height: 100vh; 
     width: 96vw;
     background-color:  rgb(9, 9, 9);
-    
+    @media only screen and (max-width: 800px) {  
+
+    height: 60rem;
+}
   
 `
  class PlayStation extends Component {

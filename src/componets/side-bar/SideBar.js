@@ -22,10 +22,10 @@ class SideBar extends Component {
                         </div>
                         <AiOutlineMenu onClick={this.props.toggleSideBar} id="btn" />
                     </div>
-                    <ul className={`nav-list`}>
+                    <ul className = "ul">
 
 
-                        <li>
+                        <li >
                             <Link to="/">
                                 <i className="control"> <GiConsoleController /> </i>
                                 <span className="links-name"> AllGames</span>
@@ -33,7 +33,7 @@ class SideBar extends Component {
                             <span className="tooltip"> Games</span>
                         </li>
 
-                        <li>
+                        <li >
                             <Link to="/bestgames">
                                 <i className="trophy"> <GiTrophy /> </i>
                                 <span className="links-name"> BestGame</span>
@@ -42,7 +42,7 @@ class SideBar extends Component {
                         </li>
 
 
-                        <li>
+                        <li >
                             <Link to="/playstation">
                                 <i className="trophy"> <FaPlaystation/> </i>
                                 <span className="links-name"> PlayStation </span>
@@ -50,15 +50,15 @@ class SideBar extends Component {
                             <span className="tooltip"> PlayStation </span>
                         </li>
 
-                        <li>
+                        <li >
                             <Link to="/nintendo">
-                                <i> <SiNintendoswitch/> </i>
+                                <i className = "nintendo"> <SiNintendoswitch/> </i>
                                 <span className="links-name"> Nintendo </span>
                             </Link>
                             <span className="tooltip"> Nintendo</span>
                         </li>
 
-                        <li>
+                        <li >
                             <Link to="/pcgames">
                                 <i className="trophy" > <AiFillWindows /> </i>
                                 <span className="links-name"> Pc Games</span>
@@ -66,7 +66,7 @@ class SideBar extends Component {
                             <span className="tooltip"> Pc Games</span>
                         </li>
                         
-                        <li>
+                        <li >
                             <Link to="/random">
                                 <i className = "random"> <GiPerspectiveDiceSixFacesRandom /> </i>
                                 <span className="links-name"> Random Game</span>
@@ -74,7 +74,7 @@ class SideBar extends Component {
                             <span className="tooltip"> Random </span>
                         </li>
 
-                        <li>
+                        <li >
                             <Link to="/gamersdev">
                                 <i className = "trophy"> <BiGame /> </i>
                                 <span className="links-name"> GamesDev</span>
@@ -84,7 +84,7 @@ class SideBar extends Component {
 
                        
 
-                        <li>
+                        <li >
                             <Link to="/creators">
                                 <i className="creators">  <FcReadingEbook /> </i>
                                 <span className="links-name">Creators</span>

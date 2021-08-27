@@ -47,7 +47,7 @@ class RandomCards extends Component {
 
 handleDelete = async(id) => {
 console.log(id)
- await axios.delete(`http://localhost:8000/characters/${id}`)
+ await axios.delete(`https://ironrest.herokuapp.com/gamersdev/${id}`)
 
     this.props.update()
 
@@ -57,7 +57,7 @@ console.log(id)
 
 
     render() {
-     console.log(this.props.id)
+    
         return (
             <Card>
                 <Game>
