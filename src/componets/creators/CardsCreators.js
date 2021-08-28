@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { AiOutlineInstagram } from 'react-icons/ai'
+import { AiOutlineInstagram , AiFillLinkedin } from 'react-icons/ai'
 
 
 const CardFlex = styled.div`
@@ -35,6 +35,10 @@ img{
     height: 10rem;
     width: 10rem;
 }
+a{
+    color: black;
+}
+
 `
 const InstaLogo = styled.div`
 
@@ -64,7 +68,7 @@ class CardsCreators extends Component {
                         <h4>Profissão : Student </h4>
                         <h4>I Love : Praticar Esportes</h4>
                     </Info>
-                    <InstaLogo> <AiOutlineInstagram /> </InstaLogo>
+                    <a href = "https://www.linkedin.com/in/gustavo-sena-33331121b/"> <InstaLogo> <AiFillLinkedin /> </InstaLogo></a>
                 </CardContent>
 
                 <CardContent>
@@ -75,7 +79,7 @@ class CardsCreators extends Component {
                         <h4>Profissão : Student</h4>
                         <h4>I Love : Tomar Café </h4>
                     </Info>
-                    <InstaLogo> <AiOutlineInstagram /> </InstaLogo>
+                    <a href = "https://www.instagram.com/patriciadecamargo_/"><InstaLogo> <AiOutlineInstagram /> </InstaLogo></a>
                 </CardContent>
             </CardFlex>
         )

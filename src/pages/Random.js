@@ -89,7 +89,6 @@ const BtAdd = styled.button`
     height: 4rem;
     background-color:  rgb(9, 9, 9);
 
-
     :hover{
         color: #000 !important;
 	    background-color: transparent;

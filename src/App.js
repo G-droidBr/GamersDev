@@ -110,8 +110,6 @@ class App extends Component {
       
               <Route exact path="/" render={(props) => <Home {...props} filter={this.state.filterGames} library={this.state.library} navbar = {this.handleNavbar} />} />
 
-
-
               <Route path="/creators" render={(props) => <Creators {...props}  navbar = {this.handleNavbarFalse} />} />
 
               <Route path="/bestgames" render={(props) => <BestGames {...props} library={this.state.library} navbar = {this.handleNavbarFalse} />} />
@@ -122,14 +120,11 @@ class App extends Component {
 
               <Route path="/nintendo" render={(props) => <Nintendo {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse} />} />
 
-              
               <Route path="/gamersdev" render={(props) => <GamersDev {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse} />} />
               
              <Route path="/random" render={(props) => <Random {...props} filter={this.state.filterGames} navbar = {this.handleNavbarFalse}/>} />
 
              <Route path = "/:id" render = {(props) => <GamesDetails {...props} library={this.state.library} /> } />
-
-           
 
               </Switch>
           </Content>

@@ -24,9 +24,9 @@ class Creators extends Component {
 
     render() {
         return (
-            <div>
+            <Div>
                 <CardsCreators />
-            </div>
+            </Div>
         )
     }
 }

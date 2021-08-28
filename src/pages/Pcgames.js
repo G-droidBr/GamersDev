@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import {Link } from 'react-router-dom'
 import Cards from '../componets/cards/Cards'
 import styled from 'styled-components'
 
@@ -14,8 +14,8 @@ const Div = styled.div`
     width: 96vw;
     background-color:  rgb(9, 9, 9);
     @media only screen and (max-width: 800px) {  
-        width: 97vw;
-        margin-left: -1rem;
+        width: 90vw;
+    margin-left: -3rem;
         height: 98vh;
     }
 `
@@ -26,11 +26,8 @@ class Pcgames extends Component {
         pcGames: []
     }
 
-
-
     componentDidMount = () => {
-        
-        
+           
         this.props.navbar()
         
         let games = this.props.filter.filter((element) => {
@@ -45,21 +42,16 @@ class Pcgames extends Component {
 
     }
     
-  
 
     render() {
-
-        console.log(this.props.filter)
         
         return (
 
             <Div>
 
                 {this.state.pcGames.map((games, i) => {
-                    return <Cards  name={games.name} background={games.background_image} datas={games.released} platforms={games.platforms} metacritic={games.metacritic}  />
+                    return <Link style = {{textDecoration : "none",color : "black"}} to = {`/${games.id}`}><Cards  name={games.name} background={games.background_image} datas={games.released} platforms={games.platforms} metacritic={games.metacritic}  /></Link> 
                 })}
-
-            
 
             </Div>
         )

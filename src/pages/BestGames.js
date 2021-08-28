@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Cards from '../componets/cards/Cards'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 
 const Div = styled.div`
@@ -13,8 +14,8 @@ const Div = styled.div`
     width: 96vw;
     background-color:  rgb(9, 9, 9);
     @media only screen and (max-width: 800px) {  
-    width: 97vw;
-    margin-left: -1rem;
+    width: 90vw;
+    margin-left: -3rem;
     height: 98vh;
 }
 `
@@ -54,17 +55,14 @@ const Div = styled.div`
             bestgames: filtered
         })
 
-
-
     }
    
 
     render() {
         return (
             <Div>
-            
                 {this.state.bestgames.map((games, i) => {
-                    return <Cards name={games.name} background={games.background_image} datas={games.released} platforms={games.platforms} metacritic={games.metacritic} />
+                    return <Link style = {{textDecoration : "none",color : "black"}} to = {`/${games.id}`}><Cards name={games.name} background={games.background_image} datas={games.released} platforms={games.platforms} metacritic={games.metacritic} /></Link>
                 })}
             </Div>
         

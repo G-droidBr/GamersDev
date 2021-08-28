@@ -34,10 +34,7 @@ const Card = styled.div`
         font-size: 1rem;
         margin-top: 2vh;
     }
-
-    
-    
-    
+ 
 `
 const Game = styled.div`
  
@@ -55,14 +52,11 @@ const InfoGames = styled.div`
  align-items: center;
  margin-top: 2.5rem;
 
-
  span{
         font-size: 1rem;
         margin-right: 0.1vw;
         margin-left: 0.1vw;
-    }
-
- 
+    } 
  `
 
     const Ratting = styled.div`
@@ -74,11 +68,9 @@ const InfoGames = styled.div`
     height: 2rem;
     border-radius: 10px;
     opacity: 0.8;
-    
     `
 
 let platformsIcons = {
-
 
     PC: <AiFillWindows />,
     "PlayStation 4": <FaPlaystation />,
@@ -88,9 +80,6 @@ let platformsIcons = {
 
 }
 
-function handleMouseEnter(params){
-    
-}
 
 
 class Cards extends Component {
@@ -111,8 +100,7 @@ class Cards extends Component {
 
         return (
             <Card>
-
-                <img src={this.props.background} alt="logo" onMouseEnter={handleMouseEnter}/>
+                <img src={this.props.background} alt="logo" />
                 <Game>
                     <InfoGames>
                         <div>

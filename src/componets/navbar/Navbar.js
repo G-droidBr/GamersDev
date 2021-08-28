@@ -11,14 +11,13 @@ height: 10vh;
 background-color: black;
 margin-top: 0;
 width: 100vw;
-@media only screen and (max-width: 800px) {
-   width: 30rem;
+@media only screen and (max-width: 1000px) {
+   width: 100vw;
 }
 
 input{
     
-    
-    width: 50vw;
+    width: 35vw;
     height: 4vh;
     border-radius: 2rem;
     background-color: rgb(9, 9, 9);
@@ -29,18 +28,36 @@ input{
     :focus {
     box-shadow: 0 0 0 0;
     outline: 0;
-}
+    
+    @media only screen and (max-width: 1000px) {
+   width: 20vw;
+   
+  }
+ }
 }
 
 i {
     color: white;
     font-size: 2rem;
+    @media only screen and (max-width: 100px) {
+   color: blue;
+   font-size: 0px;
+}
 }
 
 `
 const Title = styled.h1`
 
 color: white;
+
+@media only screen and (max-width: 100px) {
+    Title{
+        font-size: 2px;
+    } 
+   
+    
+}
+
 
 `
 
@@ -61,8 +78,8 @@ class Navbar extends Component {
 
     render() {
         return (
-            <Navbarr>
-                <Title>GamersDev</Title>
+            <Navbarr >
+                <Title className = "Title">GamersDev</Title>
 
                 <input
                     value={this.state.value}

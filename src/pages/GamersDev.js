@@ -4,7 +4,6 @@ import {IoPlay} from "react-icons/io5"
 
 const Body = styled.div`
 
-
 text-align: center;
 overflow: scroll;
 height: 100vh;
@@ -105,11 +104,9 @@ width: 30rem;
 
 class GamersDev extends Component {
 
-
     componentDidMount = () => {
         this.props.navbar()
     }
-
 
     render() {
         return (

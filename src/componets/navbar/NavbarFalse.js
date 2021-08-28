@@ -11,7 +11,7 @@ background-color: black;
 margin-top: 0;
 width: 100vw;
 @media only screen and (max-width: 800px) {
-   width: 30rem;
+   width: 100vw;
 
 }
 

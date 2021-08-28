@@ -46,7 +46,7 @@ font-size: 2rem;
 class RandomCards extends Component {
 
 handleDelete = async(id) => {
-console.log(id)
+
  await axios.delete(`https://ironrest.herokuapp.com/gamersdev/${id}`)
 
     this.props.update()
