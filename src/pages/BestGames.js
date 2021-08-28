@@ -15,8 +15,8 @@ const Div = styled.div`
     background-color:  rgb(9, 9, 9);
     @media only screen and (max-width: 800px) {  
         width: 90vw;
-        margin-left: -2.7rem;
-    height: 98vh;
+        margin-left: -2.4rem;
+        height: 98vh;
 }
 `
 

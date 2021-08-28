@@ -28,6 +28,11 @@ const Content = styled.div`
     transition: all 0.5s ease; 
     margin-left: ${(props) => props.isOpen ? "200" : "80"}px;
 
+    @media only screen and (max-width: 1000px) {
+    
+      margin-left: ${(props) => props.isOpen ? "150" : "80"}px;
+     
+   }
 
    
 `
