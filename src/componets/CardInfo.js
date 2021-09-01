@@ -10,6 +10,11 @@ overflow: scroll;
 width: 100vw;
 background-position: center;
 background-size: cover;
+@media only screen and (max-width: 800px) {  
+        width: 90vw;
+        margin-left: -2.4rem;
+        height: 98vh;
+}
 
 `
 
@@ -26,6 +31,12 @@ width: 80vw;
 height: 95vh;
 background-color: grey;
 text-align: center;
+
+@media only screen and (max-width: 800px) {  
+        
+       margin-top: 15rem;
+       padding-top: 2rem;
+}
 
 `
 const Name = styled.h1`
@@ -53,6 +64,7 @@ const Center = styled.div`
     margin-bottom: 2rem;
     color: white;
     width: 100%;
+   
    
     `
 const WebSite = styled.div`
